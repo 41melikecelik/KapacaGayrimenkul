@@ -1,140 +1,145 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-    <title>Kapaca Gayrimenkul</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            background: #fff;
-            color: #000;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kapaca Gayrimenkul</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0; padding: 20px;
+    background: #fff;
+    color: #000;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
 
-        h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            color: #000;
-            margin-bottom: 30px;
-        }
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 40px;
+  }
 
-        .links-container {
-            max-width: 320px;
-            margin: 0 auto 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+  .links-container {
+    max-width: 360px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
 
-        /* Buton link stilleri */
-        .button-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 14px 20px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #000;
-            background-color: #f0f0f0;
-            border: 2px solid #000;
-            border-radius: 8px;
-            text-decoration: none;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            user-select: none;
-        }
+  /* Ortak buton stili */
+  .button-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 24px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000;
+    background-color: #f9f9f9;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
 
-        .button-link:hover {
-            background-color: #000;
-            color: #fff;
-        }
+  .button-link:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  }
 
-        /* WhatsApp buton özel */
-        .whatsapp {
-            font-weight: 700;
-        }
+  /* Telefon numarası için küçük fark */
+  .phone-number {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 
-        /* Telefon numarası kısmı */
-        .phone-number {
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            user-select: text;
-        }
+  /* İkonlar için */
+  .button-link svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
 
-        /* Basit WhatsApp ikon (SVG inline) */
-        .whatsapp svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
+  img {
+    max-width: 90vw;
+    height: auto;
+    margin: 25px auto 15px;
+    display: block;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
 
-        img {
-            max-width: 90vw;
-            height: auto;
-            margin: 25px auto 15px;
-            display: block;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-            border-radius: 10px;
-            filter: none;
-            transition: transform 0.3s ease;
-        }
+  img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
 
-        img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
-
-        @media (min-width: 600px) {
-            body {
-                padding: 40px 60px;
-            }
-
-            h1 {
-                font-size: 4rem;
-            }
-
-            .links-container {
-                max-width: 320px;
-                gap: 20px;
-            }
-
-            .button-link {
-                font-size: 1.4rem;
-            }
-
-            .phone-number {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
+  @media (min-width: 600px) {
+    body {
+      padding: 40px 60px;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    .links-container {
+      max-width: 360px;
+      gap: 22px;
+    }
+    .button-link {
+      font-size: 1.4rem;
+      padding: 16px 28px;
+    }
+  }
+</style>
 </head>
 <body>
-    <h1>KAPACA GAYRİMENKUL</h1>
+  <h1>KAPACA GAYRİMENKUL</h1>
 
-    <!-- İlk görsel -->
-    <img src="Images/kpc1.jpg" alt="Kapaca Logo">
+  <!-- İlk görsel -->
+  <img src="Images/kpc1.jpg" alt="Kapaca Logo" />
 
-    <!-- Linkler ve WhatsApp bilgisi -->
-    <div class="links-container">
-        <a class="button-link" href="https://www.instagram.com/habip_kapaca" target="_blank" rel="noopener noreferrer">
-            <!-- Instagram ikon basit (emoji olarak) -->
-            📸 Instagram Sayfamız
-        </a>
-        <a class="button-link" href="https://kapacagayrimenkul.sahibinden.com/emlak" target="_blank" rel="noopener noreferrer">
-            🏠 Sahibinden İlanlarımız
-        </a>
-        <a class="button-link whatsapp" href="https://wa.me/905336914165" target="_blank" rel="noopener noreferrer">
-            <!-- Basit WhatsApp SVG ikon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M20.52 3.48A11.83 11.83 0 0012 0C5.37 0 .02 5.37.02 12c0 2.11.55 4.15 1.6 5.96L0 24l6.24-1.57A11.89 11.89 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 21.5a9.36 9.36 0 01-4.88-1.4l-.35-.22-3.7.94.99-3.6-.23-.36A9.49 9.49 0 012.5 12C2.5 6.75 6.75 2.5 12 2.5S21.5 6.75 21.5 12 17.25 21.5 12 21.5zm5.26-7.5c-.28-.14-1.66-.82-1.92-.91-.26-.09-.45-.14-.64.14s-.73.91-.9 1.1c-.17.18-.34.21-.63.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.37-1.63-1.53-1.91-.16-.28-.02-.43.12-.57.12-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.18.05-.34-.02-.48-.07-.14-.64-1.54-.88-2.12-.23-.56-.47-.48-.64-.49-.16 0-.35 0-.54 0-.18 0-.47.07-.72.34s-.94.92-.94 2.25.97 2.61 1.1 2.79c.14.18 1.9 2.9 4.61 4.07.64.28 1.14.45 1.53.58.64.21 1.23.18 1.69.11.52-.08 1.66-.68 1.9-1.34.23-.66.23-1.22.16-1.34-.07-.13-.26-.21-.54-.36z"/>
-            </svg>
-            WhatsApp: <span class="phone-number">0533 691 41 65</span>
-        </a>
-    </div>
+  <!-- Linkler -->
+  <div class="links-container">
+    <a class="button-link" href="https://www.instagram.com/habip_kapaca" target="_blank" rel="noopener noreferrer" aria-label="Instagram Sayfamız">
+      <!-- Instagram SVG ikonu -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 3.5a1 1 0 110 2 1 1 0 010-2zm-4.25 1.5a5.25 5.25 0 110 10.5 5.25 5.25 0 010-10.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z"/>
+      </svg>
+      Instagram Sayfamız
+    </a>
 
-    <!-- Diğer görsell
+    <a class="button-link" href="https://kapacagayrimenkul.sahibinden.com/emlak" target="_blank" rel="noopener noreferrer" aria-label="Sahibinden İlanlarımız">
+      <!-- Sahibinden SVG ikonu -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 2h16a1 1 0 011 1v18a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1zm15 2H5v16h14V4zm-8 3h4v2h-4V7zm0 4h4v2h-4v-2z"/>
+      </svg>
+      Sahibinden İlanlarımız
+    </a>
+
+    <a class="button-link" href="https://wa.me/905336914165" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişim">
+      <!-- WhatsApp SVG ikonu -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20.52 3.48A11.83 11.83 0 0012 0C5.37 0 .02 5.37.02 12c0 2.11.55 4.15 1.6 5.96L0 24l6.24-1.57A11.89 11.89 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 21.5a9.36 9.36 0 01-4.88-1.4l-.35-.22-3.7.94.99-3.6-.23-.36A9.49 9.49 0 012.5 12C2.5 6.75 6.75 2.5 12 2.5S21.5 6.75 21.5 12 17.25 21.5 12 21.5zm5.26-7.5c-.28-.14-1.66-.82-1.92-.91-.26-.09-.45-.14-.64.14s-.73.91-.9 1.1c-.17.18-.34.21-.63.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.37-1.63-1.53-1.91-.16-.28-.02-.43.12-.57.12-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.18.05-.34-.02-.48-.07-.14-.64-1.54-.88-2.12-.23-.56-.47-.48-.64-.49-.16 0-.35 0-.54 0-.18 0-.47.07-.72.34s-.94.92-.94 2.25.97 2.61 1.1 2.79c.14.18 1.9 2.9 4.61 4.07.64.28 1.14.45 1.53.58.64.21 1.23.18 1.69.11.52-.08 1.66-.68 1.9-1.34.23-.66.23-1.22.16-1.34-.07-.13-.26-.21-.54-.36z"/>
+      </svg>
+      WhatsApp: <span class="phone-number">0533 691 41 65</span>
+    </a>
+  </div>
+
+  <!-- Diğer görseller -->
+  <img src="Images/kpc2.jpg" alt="Kapaca İkinci Görsel" />
+  <img src="Images/kpc3.jpg" alt="Kapaca Üçüncü Görsel" />
+  <img src="Images/kpc4.jpg" alt="Kapaca Dördüncü Görsel" />
+  <img src="Images/kpc6.jpg" alt="Kapaca Altıncı Görsel" />
+</body>
+</html>
+ 
