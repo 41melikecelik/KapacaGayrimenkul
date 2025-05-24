@@ -6,42 +6,72 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            /* Hafif mavi-gri degrade arka plan */
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 3rem;
             text-transform: uppercase;
-            color: #333;
+            color: #0a2540; /* Koyu mavi ton */
+            margin-bottom: 30px;
         }
 
         .button-link {
-            display: block; /* blok yap, genişlik çalışsın */
-            max-width: 300px; /* görsel genişliği ile aynı */
-            width: 100%; /* kapsadığı alanın tamamını kapla */
-            margin: 10px auto; /* ortala, üst-alt boşluk bırak */
-            padding: 12px 0; /* dikey padding, yatay padding kaldırdım */
-            font-size: 18px;
+            display: block;
+            max-width: 320px;
+            width: 90%;
+            margin: 12px auto;
+            padding: 14px 0;
+            font-size: 1.2rem;
             color: #fff;
-            background-color: #2d2dff;
+            background-color: #0077cc; /* Canlı mavi */
             border: none;
             border-radius: 8px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            box-sizing: border-box; /* padding genişliğe dahil */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0,119,204,0.3);
         }
 
-            .button-link:hover {
-                background-color: #1b1bb3;
-            }
+        .button-link:hover {
+            background-color: #005fa3;
+            box-shadow: 0 6px 14px rgba(0,95,163,0.5);
+        }
 
         img {
-            max-width: 300px;
-            margin: 30px auto 10px;
+            max-width: 90vw; /* Ekranın %90'ı kadar genişlik */
+            height: auto;
+            margin: 25px auto 15px;
             display: block;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            filter: none; /* Siyah beyaz değil */
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        @media (min-width: 600px) {
+            body {
+                padding: 40px 60px;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            .button-link {
+                max-width: 300px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
